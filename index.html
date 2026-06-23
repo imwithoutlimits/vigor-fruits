@@ -4,6 +4,39 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Vigor Health Juice — Africa's Antidote. A Prescription for Life.</title>
+
+<!-- ═══ SEO ═══ -->
+<meta name="description" content="Nigeria's first NAFDAC-certified, cold-pressed functional beverage brand. Zero added sugar. 90% locally sourced. Medicine in a bottle — for immunity, weight loss, and everyday vitality.">
+<meta name="keywords" content="vigor health juice, functional beverage Nigeria, NAFDAC certified juice, weight loss juice Nigeria, moringa juice, ginger juice Nigeria, healthy drinks Lagos">
+<meta name="author" content="Deella Meda Nigeria Limited">
+<link rel="canonical" href="https://vigorfruits.com">
+
+<!-- ═══ OPEN GRAPH (WhatsApp, Telegram, Facebook, LinkedIn) ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vigor Health Juice">
+<meta property="og:url" content="https://vigorfruits.com">
+<meta property="og:title" content="Vigor Health Juice — Not Just a Drink. A Prescription for Life.">
+<meta property="og:description" content="Africa is dying of sweetness. Vigor is the antidote. Nigeria's first NAFDAC-certified, cold-pressed functional juice. Zero added sugar. Order now.">
+<meta property="og:image" content="https://vigorfruits.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vigor Health Juice — Ginger, Moringa, Zobo and Weight Loss product lines on a clean white background">
+<meta property="og:locale" content="en_NG">
+
+<!-- ═══ TWITTER / X CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@vigorfruits">
+<meta name="twitter:creator" content="@vigorfruits">
+<meta name="twitter:title" content="Vigor Health Juice — Not Just a Drink. A Prescription for Life.">
+<meta name="twitter:description" content="Africa is dying of sweetness. Vigor is the antidote. Nigeria's first NAFDAC-certified, cold-pressed functional juice. Zero added sugar.">
+<meta name="twitter:image" content="https://vigorfruits.com/og-image.jpg">
+<meta name="twitter:image:alt" content="Vigor Health Juice product lineup — NAFDAC Certified">
+
+<!-- ═══ WHATSAPP SPECIFIC ═══ -->
+<meta property="og:image:type" content="image/jpeg">
+
+<!-- ═══ FAVICON ═══ -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><polygon points='16,0 32,8 32,24 16,32 0,24 0,8' fill='%232E7D32'/><path d='M16 6C13 10 10 14 11 20C12 24 16 26 16 26C16 26 20 24 21 20C22 14 19 10 16 6Z' fill='white' opacity='0.9'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700;1,9..144,900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -25,6 +58,7 @@
    RESET
 ════════════════════════════════════════════════ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{overflow-x:hidden;}
 html{scroll-behavior:smooth;font-size:16px;}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;line-height:1.6;}
 img{max-width:100%;display:block;}
@@ -51,7 +85,7 @@ button,select,input{font-family:inherit;}
    LAYOUT
 ════════════════════════════════════════════════ */
 .container{max-width:1200px;margin:0 auto;padding:0 24px;}
-.section{padding:96px 0;}
+.section{padding:80px 0;}
 .section-dark{background:var(--ink);}
 .section-lab{background:var(--lab);}
 .section-green{background:var(--g);}
@@ -140,6 +174,7 @@ button,select,input{font-family:inherit;}
   min-height:100vh;padding-top:var(--nav-h);
   display:grid;grid-template-columns:1fr 1fr;
 }
+@media(max-width:900px){#hero{min-height:auto;grid-template-columns:1fr;}}
 .hero-left{
   display:flex;flex-direction:column;justify-content:center;
   padding:80px 60px 80px 24px;
@@ -181,6 +216,7 @@ button,select,input{font-family:inherit;}
 .hero-stats{
   display:flex;gap:0;border:1px solid var(--rule);border-radius:var(--r);
   overflow:hidden;
+  flex-wrap:wrap;
 }
 .hs-item{
   flex:1;padding:16px 20px;border-right:1px solid var(--rule);
@@ -209,7 +245,7 @@ button,select,input{font-family:inherit;}
 .hero-cans{
   position:relative;z-index:2;
   display:flex;align-items:flex-end;justify-content:center;
-  gap:16px;padding:60px 40px;
+  gap:16px;padding:48px 32px;
   width:100%;
 }
 .hcan{
@@ -289,6 +325,7 @@ button,select,input{font-family:inherit;}
   background:var(--lab);border:1px solid var(--rule);
   border-radius:var(--r);padding:28px;
 }
+.chart-panel canvas{max-height:220px;}
 .chart-panel-head{margin-bottom:20px;}
 .chart-panel-title{
   font-family:'Fraunces',serif;font-weight:700;
@@ -998,27 +1035,114 @@ footer{background:var(--ink);padding:72px 0 32px;}
 /* ════════════════════════════════════════════════
    RESPONSIVE
 ════════════════════════════════════════════════ */
+/* ══ MOBILE FIRST — comprehensive responsive overhaul ══ */
 @media(max-width:900px){
-  #hero{grid-template-columns:1fr;}
-  .hero-left{padding:60px 24px;max-width:100%;margin:0;}
-  .hero-right{min-height:340px;}
-  .disruption-grid,.clinical-grid,.corp-inner{grid-template-columns:1fr;}
-  .pack-grid,.cadence-opts{grid-template-columns:1fr 1fr;}
-  .flavor-layout{grid-template-columns:1fr;}
-  .footer-cols{grid-template-columns:1fr 1fr;}
-  .trust-badges{grid-template-columns:1fr 1fr;}
-  .farm-steps{grid-template-columns:1fr 1fr;gap:24px;}
-  .farm-line{display:none;}
-  .ugc-grid{grid-template-columns:1fr 1fr;}
-  .ug:first-child{height:240px;}
-  .ug:nth-child(5){grid-column:1;}
-  .content-grid{grid-template-columns:1fr;}
+
+  /* Global spacing */
+  .section{padding:56px 0;}
+  .container{padding:0 16px;}
+
+  /* Nav */
   .nav-links{display:none;}
+  .nav-actions .btn{padding:7px 10px;font-size:.68rem;white-space:nowrap;max-width:160px;}
+
+  /* Hero */
+  #hero{min-height:auto !important;grid-template-columns:1fr;}
+  .hero-left{padding:40px 16px 28px;max-width:100%;margin:0;}
+  .hero-h1{font-size:2.4rem;}
+  .hero-right{min-height:260px;max-height:300px;}
+  .hero-cans{padding:24px 12px;gap:8px;}
+  .hero-stats{flex-wrap:wrap;}
+  .hs-item{flex:1 1 30%;min-width:0;overflow:hidden;}
+  .hero-btns{flex-direction:column;gap:10px;}
+  .hero-btns .btn{width:100%;justify-content:center;}
+
+  /* Disruption */
+  .disruption-grid{grid-template-columns:1fr;gap:32px;}
+  .disrupt-h2{font-size:1.8rem;}
+  .chart-panel{padding:18px 14px;}
+  .stat-duo{grid-template-columns:1fr 1fr;}
+
+  /* Products */
+  .tab-nav{flex-wrap:wrap;border-radius:8px;width:100%;}
+  .tab-btn{flex:1 1 45%;border-radius:0;font-size:.72rem;padding:10px 10px;}
+  .pgrid{grid-template-columns:1fr 1fr;gap:12px;}
+  .pc-img{height:160px;}
+  .pc-body{padding:12px;}
+  .pc-name{font-size:.88rem;}
+  .pc-claim{font-size:.72rem;-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;}
+  .pc-tags{display:none;}
+
+  /* Clinical */
+  .clinical-grid{grid-template-columns:1fr;gap:32px;}
+  .archetype-grid{grid-template-columns:1fr 1fr;}
+  .big-quote{font-size:1.3rem;}
+
+  /* Subscription funnel */
+  .pack-grid{grid-template-columns:1fr;gap:10px;max-width:100%;}
+  .pack-card{padding:16px 14px;}
+  .pack-bottles{gap:3px;}
+  .pack-bottle-icon{width:14px;height:26px;}
+  .flavor-layout{grid-template-columns:1fr;gap:20px;}
+  .flavor-options{grid-template-columns:1fr;}
+  .box-preview{position:static;margin-top:16px;}
+  .cadence-opts{grid-template-columns:1fr;gap:8px;max-width:100%;}
+  .cadence-layout{max-width:100%;}
   .delivery-fields{grid-template-columns:1fr;}
   .dfield.full{grid-column:auto;}
-  .loc-inner{flex-direction:column;align-items:flex-start;}
-  .loc-form{max-width:100%;}
-  .loc-cards{grid-template-columns:1fr 1fr;}
+  .step-indicator{gap:0;overflow-x:auto;padding-bottom:4px;}
+  .si-step{padding:8px 10px;}
+  .si-label{font-size:.68rem;}
+  .si-line{width:24px;}
+
+  /* Farm */
+  .farm-steps{grid-template-columns:1fr 1fr;gap:20px;}
+  .farm-line{display:none;}
+  .fstep-dot{width:48px;height:48px;font-size:1.2rem;}
+  .trust-badges{grid-template-columns:1fr 1fr;}
+
+  /* Community */
+  .ugc-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+  }
+  .ug:first-child{grid-column:1 2;grid-row:auto;height:200px;}
+  .ug:nth-child(4),.ug:nth-child(5){grid-column:auto;}
+  .ugc-grid .ug{height:140px;}
+  .ugc-grid .ug:first-child{height:200px;}
+
+  /* Content */
+  .content-grid{grid-template-columns:1fr;}
+
+  /* Corporate */
+  .corp-inner{flex-direction:column;gap:24px;}
+  .corp-inner > *{width:100% !important;}
+  .corp-h3{font-size:1.6rem;}
+
+  /* Locator */
+  .loc-inner{flex-direction:column;align-items:flex-start;gap:14px;}
+  .loc-form{max-width:100%;width:100%;}
+  .loc-cards{grid-template-columns:1fr;}
+
+  /* Footer */
+  .footer-cols{grid-template-columns:1fr 1fr;gap:24px;}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center;}
+  .footer-cert{margin:0 auto;}
+}
+
+@media(max-width:480px){
+  .pgrid{grid-template-columns:1fr;}
+  .corp-inner{flex-direction:column;gap:20px;}
+  .corp-inner > *{width:100% !important;box-sizing:border-box;}
+  .archetype-grid{grid-template-columns:1fr;}
+  .trust-badges{grid-template-columns:1fr 1fr;}
+  .footer-cols{grid-template-columns:1fr;}
+  .tab-btn{font-size:.68rem;padding:9px 6px;}
+  .hero-h1{font-size:2rem;}
+  .section-h2{font-size:1.7rem;}
+  .stat-duo{grid-template-columns:1fr;}
+  .hero-cans{gap:4px;padding:20px 8px;}
+  .pack-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -1692,7 +1816,7 @@ footer{background:var(--ink);padding:72px 0 32px;}
           <a href="#locator" class="btn" style="background:var(--gold);color:var(--ink);">Talk to Our B2B Team</a>
         </div>
       </div>
-      <div class="rv-r" style="background:rgba(0,0,0,0.15);border-radius:var(--r);padding:32px;">
+      <div class="rv-r" style="background:rgba(0,0,0,0.15);border-radius:var(--r);padding:24px;width:100%;max-width:100%;overflow:hidden;">
         <div style="font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:#fff;margin-bottom:20px;">Corporate ROI Calculator</div>
         <div style="display:flex;flex-direction:column;gap:10px;">
           <div style="display:flex;justify-content:space-between;padding:10px 14px;background:rgba(255,255,255,0.08);border-radius:6px;">
@@ -1961,6 +2085,7 @@ new Chart(ctx,{
   options:{
     responsive:true,maintainAspectRatio:false,
     plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(17,24,39,.9)',callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}B L`}}},
+    animation:{duration:600},
     scales:{
       y:{grid:{color:'rgba(0,0,0,.05)'},ticks:{color:'#9CA3AF',font:{size:10},callback:v=>v+'B'},border:{display:false}},
       x:{grid:{display:false},ticks:{color:'#9CA3AF',font:{size:10}},border:{display:false}}
